@@ -10,39 +10,39 @@ interface Props {
 }
 
 const Ordener = ({ordener, setOrdener}: Props) => {
-    const [isOpen, setIsOpen] = useState(false);
-    const nameOrdener = ordener && options.find(option => option.value === ordener)?.name;
+	const [isOpen, setIsOpen] = useState(false);
+	const nameOrdener = ordener && options.find(option => option.value === ordener)?.name;
     
-    return (
-        <button className={classNames({
-            [styles.ordener]: true,
-            [styles['ordener--active']] : ordener !== ""
-        })}
-            onClick={() => setIsOpen(!isOpen)}
-            onBlur={() => setIsOpen(false)}
-        >
-            <span>{nameOrdener || "Ordenar por"}</span>
-            {isOpen ? (
-                <MdKeyboardArrowUp size={20} />
-                ) : ( 
-                <MdKeyboardArrowDown size={20} />
-             ) }
-            <div className={classNames({
-                [styles.ordener__options]: true,
-                [styles['ordener__options--active']]: isOpen
-            })}>
-                {options.map(option => (
-                    <div
-                        className={styles.ordener__option}
-                        key={option.value}
-                        onClick={() => setOrdener(option.value)}    
-                    >
-                        {option.name}
-                    </div>
-                ))}
-            </div>
-        </button>
-    )
-}
+	return (
+		<button className={classNames({
+			[styles.ordener]: true,
+			[styles['ordener--active']] : ordener !== ''
+		})}
+		onClick={() => setIsOpen(!isOpen)}
+		onBlur={() => setIsOpen(false)}
+		>
+			<span>{nameOrdener || 'Ordenar por'}</span>
+			{isOpen ? (
+				<MdKeyboardArrowUp size={20} />
+			) : ( 
+				<MdKeyboardArrowDown size={20} />
+			) }
+			<div className={classNames({
+				[styles.ordener__options]: true,
+				[styles['ordener__options--active']]: isOpen
+			})}>
+				{options.map(option => (
+					<div
+						className={styles.ordener__option}
+						key={option.value}
+						onClick={() => setOrdener(option.value)}    
+					>
+						{option.name}
+					</div>
+				))}
+			</div>
+		</button>
+	);
+};
 
-export default Ordener
+export default Ordener;

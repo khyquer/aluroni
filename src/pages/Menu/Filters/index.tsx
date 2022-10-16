@@ -13,30 +13,30 @@ interface Props {
 }
 
 const Filters = ({filterSelect, setFilterSelect}: Props) => {
-    function selectFilter(option: IOption){
-        if(filterSelect === option.id) return setFilterSelect(null);
+	function selectFilter(option: IOption){
+		if(filterSelect === option.id) return setFilterSelect(null);
 
-        return setFilterSelect(option.id);
-    }
+		return setFilterSelect(option.id);
+	}
 
-    return (
-        <div className={styles.filters}>
-            {filters.map((option) => (
-                <button
-                    className={
-                        classNames({
-                            [styles.filters__filter]: true,                            
-                            [styles["filters__filter--active"]]: filterSelect === option.id
-                        })
-                    }
-                    key={option.id} 
-                    onClick={() => selectFilter(option)}
-                >
-                    {option.label}
-                </button>
-            ))}
-        </div>
-    )
-}
+	return (
+		<div className={styles.filters}>
+			{filters.map((option) => (
+				<button
+					className={
+						classNames({
+							[styles.filters__filter]: true,                            
+							[styles['filters__filter--active']]: filterSelect === option.id
+						})
+					}
+					key={option.id} 
+					onClick={() => selectFilter(option)}
+				>
+					{option.label}
+				</button>
+			))}
+		</div>
+	);
+};
 
-export default Filters
+export default Filters;

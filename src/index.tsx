@@ -10,11 +10,11 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <main>
-      <Header title="A casa do código e da Massa" />
-      <Menu />
-      <Footer />
-    </main>    
-  </React.StrictMode>
+	<React.StrictMode>
+		<main>
+			<Header title="A casa do código e da Massa" />
+			<Menu />
+			<Footer />
+		</main>    
+	</React.StrictMode>
 );
