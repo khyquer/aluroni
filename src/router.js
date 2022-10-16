@@ -2,6 +2,7 @@ import Home from 'pages/Home';
 import Menu from 'pages/Menu';
 import Navigator from 'components/Navigator';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const AppRouter = () => {
@@ -12,7 +13,8 @@ const AppRouter = () => {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/menu' element={<Menu />} />
-			</Routes>
+			</Routes>			
+			<Footer />
 		</Router>
 	);
 };
