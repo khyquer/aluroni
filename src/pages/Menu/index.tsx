@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import styles from './Menu.module.scss';
+import stylesTheme from 'styles/Theme.module.scss';
+
 import Search from 'pages/Menu/Search';
 import Filters from 'pages/Menu/Filters';
 import Ordener from './Ordener';
@@ -11,8 +13,8 @@ const Menu = () => {
 	const [ordener, setOrdener] = useState('');
 
 	return (           
-		<section className={styles.menu}>
-			<h3 className={styles.manu__title}>Cardápio</h3>
+		<section className={stylesTheme.container}>
+			<h3 className={stylesTheme.title}>Cardápio</h3>
 			<Search
 				searchQuery={searchQuery}
 				setSearchQuery={setSearchQuery} 
