@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'normalize.css';
 import './index.css';
-import Menu from './pages/Menu';
-import Footer from 'components/Footer';
+import Navigator from 'components/Navigator';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import AppRouter from 'router';
 
 const root = ReactDOM.createRoot(
@@ -13,6 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<main>
+			<Navigator />
 			<Header title="A casa do código e da Massa" />
 			<AppRouter />
 			<Footer />
