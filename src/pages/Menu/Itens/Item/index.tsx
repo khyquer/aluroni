@@ -21,7 +21,7 @@ const Item = (props : Props) => {
     return (
         <div className={styles.item}>
             <div className={styles.item__image}>
-                <img src={logo} alt="imagem" />
+                <img src={photo} alt="imagem" />
             </div>
             <div className={styles.item__description}>
             <div className={styles.item__title}>
