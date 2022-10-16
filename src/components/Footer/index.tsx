@@ -1,5 +1,4 @@
 import styles from './Footer.module.scss';
-
 import { BsGithub } from 'react-icons/bs';
 
 const Footer = () => {

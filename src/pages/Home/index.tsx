@@ -2,6 +2,7 @@ import Button from 'components/Button';
 import menu from 'data/menu.json';
 import styles from './Home.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
+import imgOurHome from 'assets/home/our_home.png';
 
 const Home = () => {
 	let recommendedDish = [...menu];
@@ -21,6 +22,14 @@ const Home = () => {
 						</Button>
 					</div>
 				))}
+			</div>
+			<h3 className={stylesTheme.title}>Nossa Casa</h3>
+			<div className={styles.ourHome}>
+				<img src={imgOurHome} alt="Casa Aluroni" />
+				<div className={styles.ourHome__address}>
+					Rua dos Bobos, nº 0<br /><br />
+					Neverland - LOL
+				</div>
 			</div>
 		</section>
 	);
