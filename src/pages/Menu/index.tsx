@@ -7,7 +7,6 @@ const Menu = () => {
             <nav className={styles.Menu}>
                 <Logo />
             </nav>
-            <
         </main>
     )
 }
