@@ -34,7 +34,7 @@ const Menu = () => {
                     />
                     <Ordener ordener={ordener} setOrdener={setOrdener} />
                 </div>
-                <Itens />
+                <Itens searchQuery={searchQuery} filterSelect={filterSelect} ordener={ordener} />
             </section>
         </main>
     )

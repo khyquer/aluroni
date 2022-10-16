@@ -1,4 +1,3 @@
-import logo from 'assets/logo.svg';
 import classNames from 'classnames';
 import styles from './Item.module.scss';
 
