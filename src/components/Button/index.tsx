@@ -1,9 +1,13 @@
-import styles from './Button.module.scss';
+interface Props {
+	className: string,
+    children?: React.ReactNode
+	onClick: () => void
+}
 
-const Button = () => {
+const Button = ({className, children, onClick}: Props) => {
 	return (
-		<button className='{styles.button'>
-
+		<button className={className} onClick={onClick}>
+			{children}
 		</button>
 	);
 };

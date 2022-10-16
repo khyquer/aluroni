@@ -1,6 +1,7 @@
 import filters from './filters.json';
 import styles from './Filters.module.scss';
 import classNames from 'classnames';
+import Button from 'components/Button';
 
 interface IOption {
     id: number,
@@ -22,7 +23,7 @@ const Filters = ({filterSelect, setFilterSelect}: Props) => {
 	return (
 		<div className={styles.filters}>
 			{filters.map((option) => (
-				<button
+				<Button
 					className={
 						classNames({
 							[styles.filters__filter]: true,                            
@@ -33,7 +34,7 @@ const Filters = ({filterSelect, setFilterSelect}: Props) => {
 					onClick={() => selectFilter(option)}
 				>
 					{option.label}
-				</button>
+				</Button>
 			))}
 		</div>
 	);

@@ -22,7 +22,7 @@ const Footer = () => {
 				<a className={styles.footer__ul__li__a} href="https://github.com/lfrprazeres/aluroni-introducao"><BsGithub size={20} /> Código fonte da aula</a>
 			</section>
 		</footer>
-	)
-}
+	);
+};
 
-export default Footer
+export default Footer;

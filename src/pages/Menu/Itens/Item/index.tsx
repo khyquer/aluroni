@@ -16,7 +16,7 @@ interface Props {
 }
 
 const Item = (props : Props) => {
-	const {title, description, photo, size, serving, price, id, category} = props;
+	const {title, description, photo, size, serving, price, category} = props;
 	return (
 		<div className={styles.item}>
 			<div className={styles.item__image}>
