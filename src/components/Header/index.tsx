@@ -6,6 +6,7 @@ const Header = ({title} : {title: string}) => {
         <>
             <nav className={styles.Menu}>
                 <Logo />
+                Sobre
             </nav>
             <header className={styles.header}>
                 <div className={styles.header__text}>
