@@ -2,6 +2,7 @@ import itens from './itens.json';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import {useEffect, useState} from "react";
+
 interface Props {
     searchQuery: string,
     filterSelect: number | null,
@@ -23,11 +24,24 @@ const Itens = (props : Props) => {
 
         return true;
     }
+
+    function orderBy(newList: typeof itens){
+        switch (ordener) {
+            case 'portion':
+                return newList.sort((a, b) => a.size > b.size ? 1 : -1);
+            case 'amountpeople':
+                return newList.sort((a, b) => a.serving > b.serving ? 1 : -1);
+            case 'price':
+                return newList.sort((a, b) => a.price > b.price ? 1 : -1);
+            default:
+                return newList;
+        }
+    }
     
     useEffect(() => {
-        const newLista = itens.filter(item => testSearch(item.title) && testFilter(item.category.id));
-        setList(newLista);
-    }, [searchQuery, filterSelect])
+        const newList = itens.filter(item => testSearch(item.title) && testFilter(item.category.id));
+        setList(orderBy(newList));
+    }, [searchQuery, filterSelect, ordener])
 
     return (
         <div className={styles.itens}>
