@@ -3,10 +3,13 @@ import styles from './Menu.module.scss';
 import {ReactComponent as Logo} from 'assets/logo.svg';
 import Search from 'pages/Search';
 import Filters from "pages/Filters";
+import Ordener from "./Ordener";
+import Itens from "./Itens";
 
 const Menu = () => {
     const [searchQuery, setSearchQuery] = useState("");
-    const [filterSelect, setFilterSelect] = useState<number | null>(null)
+    const [filterSelect, setFilterSelect] = useState<number | null>(null);
+    const [ordener, setOrdener] = useState('');
 
     return (
         <main>
@@ -20,7 +23,7 @@ const Menu = () => {
             </header>
             <section className={styles.menu}>
                 <h3 className={styles.manu__title}>Cardápio</h3>
-                   <Search
+                <Search
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery} 
                 />
@@ -29,7 +32,9 @@ const Menu = () => {
                         filterSelect={filterSelect}
                         setFilterSelect={setFilterSelect}
                     />
+                    <Ordener ordener={ordener} setOrdener={setOrdener} />
                 </div>
+                <Itens />
             </section>
         </main>
     )
