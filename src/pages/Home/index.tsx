@@ -11,7 +11,7 @@ const Home = () => {
 	return (
 		<section className={stylesTheme.container}>
 			<h3 className={stylesTheme.title}>Recomendações</h3>
-			<div>
+			<div className={styles.recommendeds}>
 				{recommendedDish.map((item) => (
 					<div key={item.id} className={styles.recommended}>
 						<div key={item.id} className={styles.recommended__image}>

@@ -6,6 +6,7 @@ import Search from 'pages/Menu/Search';
 import Filters from 'pages/Menu/Filters';
 import Ordener from './Ordener';
 import Itens from './Itens';
+import classNames from 'classnames';
 
 const Menu = () => {
 	const [searchQuery, setSearchQuery] = useState('');
@@ -13,7 +14,10 @@ const Menu = () => {
 	const [ordener, setOrdener] = useState('');
 
 	return (           
-		<section className={stylesTheme.container}>
+		<section className={classNames({
+			[styles.menu]: true,
+			[stylesTheme.container]: true
+		})}>
 			<h3 className={stylesTheme.title}>Cardápio</h3>
 			<Search
 				searchQuery={searchQuery}

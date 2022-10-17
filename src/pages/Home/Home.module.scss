@@ -1,20 +1,7 @@
 @import 'styles/variables';
 @import 'styles/breakpoints';
 
-
-.home {
-
-  &__filters {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    width: 100%;
-  }
-}
-
-.recommended {
+.recommendeds {
   border-radius: 2px;
   display: flex;
   flex-wrap: wrap;
