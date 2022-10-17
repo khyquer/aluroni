@@ -1,29 +1,21 @@
 import classNames from 'classnames';
 import Button from 'components/Button';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Navigate  } from 'react-router-dom';
 import stylesTheme from 'styles/Theme.module.scss';
 import styles from './Dish.module.scss';
 import menu from 'data/menu.json';
 import Tags from 'components/Tags';
+import NotFound from 'pages/NotFound';
 
 const Dish = () => {
 	const {id} = useParams();
 	
 	const navigate = useNavigate();
 
-	const dishes = menu.find(item => item.id === Number(id)) || {
-		title: '1',
-		description: '1',
-		photo: '1',
-		size: 1,
-		serving: 1,
-		price: 1,
-		id: 1,
-		category: {
-			id: 1,
-			label: '1',
-		}
-	};
+	const dish = menu.find(item => item.id === Number(id));
+	if(!dish){
+		return <Navigate to="/404" replace={true} />;
+	}
 
 	return (
 		<section className={classNames({
@@ -37,18 +29,18 @@ const Dish = () => {
 				{'< Voltar'}
 			</Button>
 			<h1 className={styles.title}>
-				{dishes.title}
+				{dish.title}
 			</h1>
 			<div className={styles.image}>
-				<img src={dishes.photo} alt={dishes.title} />
+				<img src={dish.photo} alt={dish.title} />
 			</div>
 			<div className={styles.content}>
 				<p className={styles.content__description}>
-					{dishes.description}	
+					{dish.description}	
 				</p>
 			</div>
 			<div className={styles.tags}>
-				<Tags {...dishes} />
+				<Tags {...dish} />
 			</div>
 		</section>
 	);

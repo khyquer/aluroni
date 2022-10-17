@@ -31,7 +31,12 @@ const Home = () => {
 				{recommendedDish.map((item) => (
 					<div key={item.id} className={styles.recommended}>
 						<div key={item.id} className={styles.recommended__image}>
-							<img src={item.photo} alt={item.title} title={item.title} />
+							<img
+								src={item.photo}
+								alt={item.title}
+								title={item.title}
+								onClick={() => redirectToDetails(item)}
+							/>
 						</div>
 						<Button 
 							className={styles.recommended__button}

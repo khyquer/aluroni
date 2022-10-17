@@ -27,14 +27,14 @@ const Item = (props : Props) => {
 	}
 
 	return (
-		<div className={styles.item}>
+		<div className={styles.item}  onClick={() => redirectToDetails(props)}>
 			<div className={styles.item__image}>
-				<img src={photo} alt="imagem" onClick={() => redirectToDetails(props)} />
+				<img src={photo} alt="imagem" />
 			</div>
 			<div className={styles.item__description}>
 				<div className={styles.item__title}>
-					<h2 onClick={() => redirectToDetails(props)}>{title}</h2>
-					<p onClick={() => redirectToDetails(props)}>{description}</p>
+					<h2>{title}</h2>
+					<p>{description}</p>
 				</div>
 				<Tags {...props} />			
 			</div>

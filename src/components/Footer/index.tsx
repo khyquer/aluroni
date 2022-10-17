@@ -21,7 +21,9 @@ const Footer = () => {
 				<a className={styles.footer__ul__li__a} href="https://github.com/khyquer/aluroni"><BsGithub size={20} /> Meu código</a>
 				<a className={styles.footer__ul__li__a} href="https://github.com/lfrprazeres/aluroni-introducao"><BsGithub size={20} /> Código fonte da aula</a>
 			</section>			
-			<Logo className={styles.logo} />
+			<div className={styles.logo}>
+				<Logo className={styles.logo__image} />
+			</div>
 		</footer>
 	);
 };
