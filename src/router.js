@@ -8,17 +8,19 @@ import NotFound from 'pages/NotFound';
 
 const AppRouter = () => {
 	return (
-		<Router>
-			<Routes>
-				<Route path='/' element={<Page />}>
-					<Route index element={<Home />} />
-					<Route path='menu' element={<Menu />} />
-					<Route path='sobre' element={<About />} />
-					<Route path='*' element={<NotFound />} />
-				</Route>
-			</Routes>			
-			<Footer />
-		</Router>
+		<main className='container'>
+			<Router>
+				<Routes>
+					<Route path='/' element={<Page />}>
+						<Route index element={<Home />} />
+						<Route path='menu' element={<Menu />} />
+						<Route path='sobre' element={<About />} />
+						<Route path='*' element={<NotFound />} />
+					</Route>
+				</Routes>			
+				<Footer />
+			</Router>
+		</main>
 	);
 };
 

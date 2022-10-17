@@ -1,21 +1,9 @@
 @import "styles/variables";
 
-.footer-company{
-    display: grid;
-    align-self: flex-start;
-    width: 200px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.social {
-    padding: 20px; 
-}
 
 .footer {
     background: #d73b3b;
     color: white;
-    height: 150px;
     display: grid;
     padding: 0px $padding-horizontal;    
     grid-template-columns: 20% 50% 30%;
@@ -39,6 +27,18 @@
     }
 }
 
+.footer-company{
+    display: grid;
+    align-self: flex-start;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social {
+    padding: 20px; 
+}
+
 .logo{
-    float: right;
+    align-items: flex-end;
 }
