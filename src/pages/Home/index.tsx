@@ -3,10 +3,19 @@ import menu from 'data/menu.json';
 import styles from './Home.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
 import imgOurHome from 'assets/home/our_home.png';
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
-	let recommendedDish = [...menu];
-	recommendedDish = recommendedDish.sort(() => 0.5 * Math.random()).splice(0, 3);
+	const location = useLocation();
+
+	const [recommendedDish, setRecommendedDish] = useState([...menu]);
+
+	useEffect(() => {
+		setRecommendedDish(
+			recommendedDish.sort(() => (Math.random() > 0.5 ? 0 : -1)
+			).splice(0, 3));
+	}, [location]);
 
 	return (
 		<section className={stylesTheme.container}>
