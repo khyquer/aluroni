@@ -2,6 +2,7 @@ import itens from 'data/menu.json';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import {useEffect, useState} from 'react';
+import { Menu } from 'types/dish';
 
 interface Props {
     searchQuery: string,
@@ -25,7 +26,7 @@ const Itens = (props : Props) => {
 		return true;
 	}
 
-	function orderBy(newList: typeof itens){
+	function orderBy(newList: Menu){
 		switch (ordener) {
 		case 'portion':
 			return newList.sort((a, b) => a.size > b.size ? 1 : -1);

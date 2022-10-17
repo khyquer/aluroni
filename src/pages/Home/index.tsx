@@ -3,8 +3,9 @@ import menu from 'data/menu.json';
 import styles from './Home.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
 import imgOurHome from 'assets/home/our_home.png';
-import { redirect, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Dish } from 'types/dish';
 
 const Home = () => {
 	const location = useLocation();
@@ -19,7 +20,7 @@ const Home = () => {
 			).splice(0, 3));
 	}, [location]);
 
-	function redirectToDetails(dish: typeof menu[0]){
+	function redirectToDetails(dish: Dish){
 		navigate(`/dish/${dish.id}`, { state: { dish } });
 	}
 
@@ -30,7 +31,7 @@ const Home = () => {
 				{recommendedDish.map((item) => (
 					<div key={item.id} className={styles.recommended}>
 						<div key={item.id} className={styles.recommended__image}>
-							<img src={item.photo} alt={item.title} />
+							<img src={item.photo} alt={item.title} title={item.title} />
 						</div>
 						<Button 
 							className={styles.recommended__button}
