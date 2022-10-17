@@ -13,6 +13,7 @@
     img {
       border-radius: 8px;
       width: 100%;
+      cursor: pointer;
     }
   }
   &__description {
@@ -33,6 +34,7 @@
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 20px;
+      cursor: pointer;
     }
     p {
       color: $dark-grey;
@@ -40,6 +42,11 @@
       font-weight: 600;
       max-width: 600px;
       margin-bottom: 20px;
+      cursor: pointer;
     }
+  }
+
+  &__button{
+    width: 100px;
   }
 }
