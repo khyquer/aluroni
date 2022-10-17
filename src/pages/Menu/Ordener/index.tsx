@@ -1,5 +1,5 @@
 import styles from './Ordener.module.scss';
-import options from './options.json';
+import options from 'data/options.json';
 import { useState } from 'react';
 import classNames from 'classnames';
 import {MdKeyboardArrowUp, MdKeyboardArrowDown} from 'react-icons/md';

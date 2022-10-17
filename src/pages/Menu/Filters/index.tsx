@@ -1,4 +1,4 @@
-import filters from './filters.json';
+import filters from 'data/filters.json';
 import styles from './Filters.module.scss';
 import classNames from 'classnames';
 import Button from 'components/Button';
