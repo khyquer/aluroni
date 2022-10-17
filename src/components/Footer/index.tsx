@@ -1,4 +1,5 @@
 import styles from './Footer.module.scss';
+import {ReactComponent as Logo} from 'assets/logo.svg';
 import { BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
@@ -19,7 +20,8 @@ const Footer = () => {
 			<section className={styles.social} >
 				<a className={styles.footer__ul__li__a} href="https://github.com/khyquer/aluroni"><BsGithub size={20} /> Meu código</a>
 				<a className={styles.footer__ul__li__a} href="https://github.com/lfrprazeres/aluroni-introducao"><BsGithub size={20} /> Código fonte da aula</a>
-			</section>
+			</section>			
+			<Logo className={styles.logo} />
 		</footer>
 	);
 };
