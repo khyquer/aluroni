@@ -3,7 +3,7 @@ import menu from 'data/menu.json';
 import styles from './Home.module.scss';
 import stylesTheme from 'styles/Theme.module.scss';
 import imgOurHome from 'assets/home/our_home.png';
-import { useLocation } from 'react-router-dom';
+import { redirect, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const Home = () => {
@@ -11,11 +11,17 @@ const Home = () => {
 
 	const [recommendedDish, setRecommendedDish] = useState([...menu]);
 
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		setRecommendedDish(
 			recommendedDish.sort(() => (Math.random() > 0.5 ? 0 : -1)
 			).splice(0, 3));
 	}, [location]);
+
+	function redirectToDetails(dish: typeof menu[0]){
+		navigate(`/dish/${dish.id}`);
+	}
 
 	return (
 		<section className={stylesTheme.container}>
@@ -26,7 +32,10 @@ const Home = () => {
 						<div key={item.id} className={styles.recommended__image}>
 							<img src={item.photo} alt={item.title} />
 						</div>
-						<Button className={styles.recommended__button}>
+						<Button 
+							className={styles.recommended__button}
+							onClick={() => redirectToDetails(item)}
+						>
 							Ver mais
 						</Button>
 					</div>

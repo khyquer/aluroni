@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Page from 'components/Page';
 import About from 'pages/About';
 import NotFound from 'pages/NotFound';
+import Dish from 'pages/Dish';
 
 const AppRouter = () => {
 	return (
@@ -15,9 +16,10 @@ const AppRouter = () => {
 						<Route index element={<Home />} />
 						<Route path='menu' element={<Menu />} />
 						<Route path='sobre' element={<About />} />
-						<Route path='*' element={<NotFound />} />
-					</Route>
-				</Routes>			
+						<Route path='*' element={<NotFound />} />	
+						<Route path='dish/:id' element={<Dish />} />
+					</Route>	
+				</Routes>		
 				<Footer />
 			</Router>
 		</main>
