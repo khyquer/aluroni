@@ -5,7 +5,7 @@ import stylesTheme from 'styles/Theme.module.scss';
 import imgOurHome from 'assets/home/our_home.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Dish } from 'types/dish';
+import { Dish } from 'types/Dish';
 
 const Home = () => {
 	const location = useLocation();

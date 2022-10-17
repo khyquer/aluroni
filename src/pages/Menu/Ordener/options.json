@@ -4,15 +4,27 @@
     "value": ""
   },
   {
-    "name": "Porção",
-    "value": "portion"
+    "name": "Maior Porção",
+    "value": "sizeasc"
   },
   {
-    "name": "Qtd. pessoas",
-    "value": "amountpeople"
+    "name": "Menor Porção",
+    "value": "sizedesc"
   },
   {
-    "name": "Preço",
-    "value": "price"
+    "name": "Maior Qtd. pessoas",
+    "value": "amountpeopleasc"
+  },
+  {
+    "name": "Menor Qtd. pessoas",
+    "value": "amountpeopledesc"
+  },
+  {
+    "name": "Maior Preço",
+    "value": "priceasc"
+  },
+  {
+    "name": "Menor Preço",
+    "value": "pricedesc"
   }
 ]

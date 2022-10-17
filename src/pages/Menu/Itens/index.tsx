@@ -2,7 +2,7 @@ import itens from 'data/menu.json';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import {useEffect, useState} from 'react';
-import { Menu } from 'types/dish';
+import { Menu } from 'types/Dish';
 
 interface Props {
     searchQuery: string,
@@ -28,11 +28,17 @@ const Itens = (props : Props) => {
 
 	function orderBy(newList: Menu){
 		switch (ordener) {
-		case 'portion':
+		case 'sizeasc':
+			return newList.sort((a, b) => a.size < b.size ? 1 : -1);
+		case 'sizedesc':
 			return newList.sort((a, b) => a.size > b.size ? 1 : -1);
-		case 'amountpeople':
+		case 'amountpeopleasc':
+			return newList.sort((a, b) => a.serving < b.serving ? 1 : -1);
+		case 'amountpeopledesc':
 			return newList.sort((a, b) => a.serving > b.serving ? 1 : -1);
-		case 'price':
+		case 'priceasc':
+			return newList.sort((a, b) => a.price < b.price ? 1 : -1);
+		case 'pricedesc':
 			return newList.sort((a, b) => a.price > b.price ? 1 : -1);
 		default:
 			return newList;
