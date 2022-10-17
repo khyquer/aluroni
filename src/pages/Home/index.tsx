@@ -20,7 +20,7 @@ const Home = () => {
 	}, [location]);
 
 	function redirectToDetails(dish: typeof menu[0]){
-		navigate(`/dish/${dish.id}`);
+		navigate(`/dish/${dish.id}`, { state: { dish } });
 	}
 
 	return (
