@@ -1,9 +1,5 @@
 import classNames from 'classnames';
-import Button from 'components/Button';
-import { useParams, useNavigate } from 'react-router-dom';
-import stylesTheme from 'styles/Theme.module.scss';
 import styles from './Tags.module.scss';
-import menu from 'data/menu.json';
 import {Dish} from 'types/Dish';
 
 const Tags = ({category, price, serving, size}: Dish) => {
