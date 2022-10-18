@@ -5,7 +5,6 @@ import stylesTheme from 'styles/Theme.module.scss';
 import styles from './Dish.module.scss';
 import menu from 'data/menu.json';
 import Tags from 'components/Tags';
-import NotFound from 'pages/NotFound';
 
 const Dish = () => {
 	const {id} = useParams();
