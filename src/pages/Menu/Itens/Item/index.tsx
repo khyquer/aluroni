@@ -1,6 +1,6 @@
 import Tags from 'components/Tags';
 import { useNavigate } from 'react-router-dom';
-import { Dish } from 'types/Dish';
+import { Dish } from 'types/dish';
 import styles from './Item.module.scss';
 
 interface Props {

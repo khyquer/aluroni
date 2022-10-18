@@ -2,7 +2,7 @@ import itens from 'data/menu.json';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import {useEffect, useState} from 'react';
-import { Menu } from 'types/Dish';
+import { Menu } from 'types/dish';
 
 interface Props {
     searchQuery: string,

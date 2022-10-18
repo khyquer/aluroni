@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import styles from './Tags.module.scss';
-import {Dish} from 'types/Dish';
+import {Dish} from 'types/dish';
 
 const Tags = ({category, price, serving, size}: Dish) => {
 
